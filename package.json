@@ -5,7 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "dev": "nodemon src/server.js",
-    "start": "node src/server.js",
+    "start": "npm run db-migrate && node src/server.js",
     "db-migrate": "npx sequelize-cli db:migrate --config ./src/shared/config/sequelize-cli.config.cjs",
     "db-migrate-undo": "npx sequelize-cli db:migrate:undo --config ./src/shared/config/sequelize-cli.config.cjs",
     "db-migrate-undo-all": "npx sequelize-cli db:migrate:undo:all --config ./src/shared/config/sequelize-cli.config.cjs",
